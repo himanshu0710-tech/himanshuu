@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Web Components</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Question 1: Responsive Navigation Bar */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("data:image/jpeg;base64,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")
+            no-repeat center;
+            background-attachment: fixed;
+            background-size: 100vmax;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+        }
+
+        .navbar .menu {
+            display: flex;
+        }
+
+        .navbar .menu a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .navbar .menu a:hover {
+            background-color: #575757;
+        }
+
+        .toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background-color: #333;
+                width: 100%;
+                top: 50px;
+            }
+
+            .navbar .menu.active {
+                display: flex;
+            }
+
+            .toggle {
+                display: block;
+            }
+        }
+
+        /* Question 2: Card Layout with Hover Effects */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            margin: 10px;
+        }
+
+        .card p {
+            margin: 10px;
+        }
+
+        .card button {
+            margin: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Question 3: Animated Progress Bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 30px;
+            width: 0;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: width 2s;
+        }
+
+        .progress-label {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Question 4: CSS Accordion Menu */
+        .accordion {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .accordion-item {
+            background: #1e7deb;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+
+        .accordion-header {
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: white;
+            padding: 0 10px;
+        }
+
+        .accordion-header.active + .accordion-content {
+            max-height: 100px; /* Adjust as needed */
+            padding: 10px;
+        }
+
+        /* Question 5: Gradient Button with Animation */
+        .gradient-button {
+            background: linear-gradient(45deg, #ff6b6b, #f7d94c);
+            border: none;
+ border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .gradient-button:hover {
+            background: linear-gradient(45deg, #f7d94c, #ff6b6b);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .pulse {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Question 1: Responsive Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">HIMANSHU CAR EXPO</div>
+        <div class="menu" id="menu">
+            <a href="#home"><i class="fa-solid fa-house"></i></a>
+            <a href="#about"><i class="fa-solid fa-address-card"></i></a>
+            <a href="#services"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+            <a href="#contact"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <div class="toggle" id="toggle">&#9776;</div>
+    </nav>
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Question 2: Card Layout with Hover Effects -->
+    <div class="card-container">
+        <div class="card">
+            <img src="https://4kwallpapers.com/images/wallpapers/bmw-m8-gran-coupe-first-edition-2020-5k-8k-1080x2160-2577.jpg" alt="Product 1">
+            <h3>BMW 520d</h3>
+            <p>530e/530e xDrive: A turbocharged 2.0L four-cylinder engine/electric motor with 288 hp and 310 lb-ft of torque. 540i/540i xDrive: A turbocharged 3.0L inline-six engine with 335 hp and 331 lb-ft of torque.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <img src="https://wallpapercat.com/w/full/f/4/c/1681118-2160x3840-samsung-4k-bmw-x7-background-photo.jpg" alt="Product 2">
+            <h3>BMW X7</h3>
+            <p>BMW X7 is currently available in Petrol and Diesel engines. The 2998 cc Petrol engine generates a power of 375.48bhp@5200-6250rpm and a torque of 520Nm@1850-5000rpm. The 2993 cc Diesel engine generates a power of 335.25bhp@4400rpm and a torque of 700Nm@1750-2250rpm.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/643/916/desktop-wallpaper-2023-bmw-7-series-and-i7-live-from-olympiapark-bmw-m7-2023-thumbnail.jpg" alt="Product 3">
+            <h3>BMW I7</h3>
+            <p>The maximum power of the BMW i7 xDrive60 is 400 kW (536 hp). The maximum torque is 550 lb-ft. The BMW i7 xDrive60 is all wheel drive and can accelerate from 0 to 62 miles per hour in 4.7 seconds. The top speed is 149 mph.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+
+    <!-- Question 3: Animated Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" style="width: 70%;"></div>
+        <div class="progress-label">70%</div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = '100%';
+        };
+    </script>
+
+    <!-- Question 4: CSS Accordion Menu -->
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">CAR BRAND</div>
+            <div class="accordion-content">BMW</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">COMPANY ADDRESS</div>
+            <div class="accordion-content">MUMBAI,DAHISAR</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">EMAIL & NUMBER</div>
+            <div class="accordion-content">hce1212@gmail.com , 1112223330 </div>
+        </div>
+    </div>
+
+    <script>
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const activeHeader = document.querySelector('.accordion-header.active');
+                if (activeHeader && activeHeader !== header) {
+                    activeHeader.classList.remove('active');
+                    activeHeader.nextElementSibling.style.maxHeight = 0;
+                }
+                header.classList.toggle('active');
+                const content = header.nextElementSibling;
+                if (header.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+    <!-- Question 5: Gradient Button with Animation -->
+    <button class="gradient-button pulse">CLICK ME</button>
+</body>
+</html>
