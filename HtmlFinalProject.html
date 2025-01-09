@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All in One HTML Project</title>
+</head>
+<body>
+
+    <h1>Basic Form Creation</h1>
+    <form>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required><br><br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Image and Link</h1>
+    <a href="https://v-extechsolution.in/static/media/logo.b48612c02e688a28a62f.png">
+        <img src="https://v-extechsolution.in/static/media/logo.b48612c02e688a28a62f.png" alt="Description of the image">
+    </a>
+
+    <h1>Table Creation</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+        </tr>
+    </table>
+
+    <h1>List Creation</h1>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ol>
+
+    <h1>Input Attributes</h1>
+    <form>
+        <label for="default-name">Name:</label>
+        <input type="text" id="default-name" name="default-name" value="John Doe" maxlength="20"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" min="2023-01-01" max="2024-12-31"><br><br>
+
+        <label for="files">Upload Files:</label>
+        <input type="file" id="files" name="files" multiple><br><br>
+
+        <label for="number">Number (1-10):</label>
+        <input type="number" id="number" name="number" min="1" max="10"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Forms with Different Input Types</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms">Agree to Terms</label><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Video</h1>
+    <video width="320" height="240" controls>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>Hyperlinks and Anchor Tags</h1>
+    <a href="https://v-extechsolution.in/" target="_blank">Go to V-Ex Tech Solution</a>
+    <br>
+    <a href="#anchor">Go to Anchor</a>
+    <h2 id="anchor">Anchor Section</h2>
+    <p>This is the anchor section.</p>
+
+</body>
+</html>
