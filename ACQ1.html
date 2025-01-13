@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance CSS</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Question 1 */
+
+        .gradient-button {
+            background: linear-gradient(to right, rgb(0, 132, 255), green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .gradient-button:hover {
+            background: linear-gradient(to right, red, yellow);
+        }
+
+        /* Question 2*/
+
+        .truncate-box {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        /* Question 3 */
+
+        .square-box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: transform 0.3s;
+        }
+
+        .square-box:hover {
+            transform: rotate(45deg) scale(1.5) translateX(50px);
+        }
+
+        /* QUESTION 4*/
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(66, 173, 71);
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%{
+            transform: translateY(0);
+        }
+
+        100%{
+            transform: translateY(-100px);
+        }
+        }
+
+        /* Question 5 */
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .box {
+            width: 30%;
+            height: 100px;
+            background-color: rgb(10, 173, 228);
+            margin: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .box {
+                width: 100%;
+            }
+        }
+        
+        /* Question 6 */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        .grid-item {
+            background-color: rgb(241, 8, 8);
+            height: 100px;
+        }
+
+        @media (max-width: 500px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Question 7 */
+
+        .card {
+            width: 150px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        .card-front {
+            background-color: rgb(9, 201, 235);
+        }
+
+        .card-back {
+            background-color: rgb(245, 8, 245);
+            transform: rotateY(180deg);
+        }        
+
+        
+    </style>
+</head>
+<body>
+    <!--Question 1-->
+    <button class="gradient-button">Question 1!</button>
+
+    <!--Question 2-->
+    <div class="truncate-box">This is an example to see ellipsis.</div>
+
+    <!--Question 3-->
+    <div class="square-box"></div>
+
+    <!--QUESTION 4-->
+    <div class="ball"></div>
+
+    <!--Question 5-->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+    <!--Question 6-->
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+    <!--Question 7-->
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h3>FRONT SIDE</h3>
+                <p>This is the front of the card.</p>
+            </div>
+            <div class="card-back">
+                <h3>BACK SIDE</h3>
+                <p>This is the back of the card with more details.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
